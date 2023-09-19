@@ -8,7 +8,9 @@ build-parameters:
   before-all:
     - builder: custom
       commands:
-        - npx cds build --production
+        - npm ci
+        - npx -p @sap/cds-dk cds build --production
+
 modules:
   - name: risk-management-srv
     type: nodejs
@@ -85,3 +87,4 @@ resources:
     parameters:
       service: destination
       service-plan: lite
+
